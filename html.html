@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PineOS 11 - Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="desktop">
+        <!-- Wallpaper -->
+        <img id="wallpaper" src="wallpaper1.jpg" alt="Wallpaper">
+
+        <!-- Taskbar -->
+        <div id="taskbar">
+            <div id="start-btn">Start</div>
+            <div id="taskbar-icons">
+                <img src="icon-terminal.png" alt="Terminal" onclick="openApp('Terminal')">
+            </div>
+            <div id="system-tray">
+                <img src="settings.png" alt="Settings">
+                <img src="volume.png" alt="Volume">
+                <img src="battery.png" alt="Battery">
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div id="start-menu">
+            <ul>
+                <li onclick="openApp('Terminal')">Terminal</li>
+            </ul>
+        </div>
+
+        <!-- App Windows -->
+        <div id="app-windows"></div>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="meltdown-sound" src="Core Meltdown - Innovation Labs MusicSoundtrack HD.mp3" preload="auto"></audio>
+    <audio id="freezedown-sound" src="Core Meltdown - Innovation Labs MusicSoundtrack HD.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

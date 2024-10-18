@@ -1,0 +1,135 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full screen desktop */
+#desktop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Wallpaper */
+#wallpaper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* Taskbar */
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#start-btn {
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+#taskbar-icons img, #system-tray img {
+    width: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Start Menu */
+#start-menu {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    width: 200px;
+}
+
+#start-menu ul {
+    list-style-type: none;
+}
+
+#start-menu li {
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+#start-menu li:hover {
+    background-color: #ddd;
+}
+
+/* App windows */
+.app-window {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: black;
+    color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    top: 50px;
+    left: 50px;
+    font-family: monospace;
+}
+
+.app-window .title-bar {
+    background-color: #0078d7;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-window .title-bar button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.app-window .content {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.app-window .input-area {
+    display: flex;
+}
+
+.app-window .input-area input {
+    flex-grow: 1;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-family: monospace;
+}
+
+.app-window .input-area input:focus {
+    outline: none;
+}
+
+/* Draggable app windows */
+.draggable {
+    cursor: grab;
+}
